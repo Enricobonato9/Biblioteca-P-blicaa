@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manutenção - Biblioteca Pública</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="shortcut icon" href="./img/library-icon.png" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://th.bing.com/th/id/R.1727f4a07a80a40db16970437691db05?rik=k4wEaqcKwMX8YA&pid=ImgRaw&r=0" alt="Logo da Biblioteca Pública">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="manutencao.html">Manutenção</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="manutencao">
+    <h1>Histórico de Manutenção</h1>
+    <div class="table">
+      <div class="table-header">
+        <div>Equipamento</div>
+        <div>Data</div>
+        <div>Descrição</div>
+      </div>
+        <div>Reinstalação do sistema operacional</div>
+      </div>
+        <div>Substituição da tela</div>
+      </div>
+    </div>
+
+    <h2>Relatar Problema</h2>
+    <form action="/submit" method="POST">
+      <fieldset>
+        <legend>Detalhes do Problema</legend>
+
+        <label for="equipamento">Equipamento:</label>
+        <input type="text" id="equipamento" name="equipamento" required placeholder="Digite o nome do equipamento">
+        
+        <label for="descricao">Descrição do Problema:</label>
+        <textarea id="descricao" name="descricao" rows="4" required placeholder="Descreva o problema que está ocorrendo"></textarea>
+        
+        <label for="urgencia">Urgência:</label>
+        <select id="urgencia" name="urgencia">
+          <option value="baixa">Baixa</option>
+          <option value="media">Média</option>
+          <option value="alta">Alta</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações de Contato</legend>
+        
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu email">
+      </fieldset>
+
+      <button type="submit">Enviar Relatório</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Pública. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
